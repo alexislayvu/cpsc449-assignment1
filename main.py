@@ -54,7 +54,7 @@ def get_jobs():
     return jsonify(jobs)
 
 
-# UPDATE: update an existing job listing in the database
+# UPDATE: update an existing job listing in the database based on provided ID
 @app.route("/jobs/<int:job_id>", methods=["PUT"])
 def update_job(job_id):
     data = request.json
@@ -79,10 +79,10 @@ def update_job(job_id):
     mysql.connection.commit()
     cur.close()
 
-    return jsonify({"message": "Job updated successfully"})
+    return jsonify({"message": "Job updated successfully"}), 200
 
 
-# DELETE: delete a job listing from the database by ID
+# DELETE: delete a job listing from the database based on provided ID
 @app.route("/jobs/<int:job_id>", methods=["DELETE"])
 def delete_job(job_id):
     cur = mysql.connection.cursor()
@@ -99,7 +99,7 @@ def delete_job(job_id):
     mysql.connection.commit()
     cur.close()
 
-    return jsonify({"message": "Job deleted successfully"})
+    return jsonify({"message": "Job deleted successfully"}), 200
 
 
 if __name__ == "__main__":
