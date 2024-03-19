@@ -23,7 +23,4 @@ VALUES
         'Mountain View, CA'
     ),
     ('Marketing Specialist', 'Apple', 'Cupertino, CA'),
-    ('Data Analyst', 'Amazon', 'Seattle, WA'),
-    ('Product Manager', 'Microsoft', 'Redmond, WA'),
-    ('Graphic Designer', 'Facebook', 'Menlo Park, CA'),
-    ('Financial Analyst', 'Netflix', 'Los Gatos, CA');
+    ('Data Analyst', 'Amazon', 'Seattle, WA');
